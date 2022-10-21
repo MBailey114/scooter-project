@@ -1,9 +1,19 @@
 const User = require('../src/User')
 
-// User tests here
 
-// test username
+let testUser = new User("Steve","123",18)
 
-// test password
+describe("Test user attributes",() => {
+    test("Username correct",() => {
+        expect(testUser.userName).toEqual("Steve");
+    })
 
-// test age
+    test("Password correct",() => {
+        expect(testUser.password).toEqual("123");
+    })
+
+    test("Age correct",() => {
+        expect(testUser.age).toEqual(18);
+    })
+})
+
